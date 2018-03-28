@@ -7,7 +7,7 @@ flex container:
 display: flex or inline-flex; As soon as we do this the direct children of that container become flex items.
 flex-direction: row | row-reverse | column | column-reverse;
 flex-wrap: nowrap | wrap | wrap-reverse;
-flex-flow: <‘flex-direction’> || <‘flex-wrap’> This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
+flex-flow: <'flex-direction'> || <'flex-wrap'> This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
 justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; (main axis)
 
 Note that, per space-around, visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
