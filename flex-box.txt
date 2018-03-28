@@ -1,0 +1,33 @@
+CSS Flexible Box Layout is a module of CSS that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.
+
+Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+
+flex container:
+
+display: flex or inline-flex; As soon as we do this the direct children of that container become flex items.
+flex-direction: row | row-reverse | column | column-reverse;
+flex-wrap: nowrap | wrap | wrap-reverse;
+flex-flow: <‘flex-direction’> || <‘flex-wrap’> This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; (main axis)
+
+Note that, per space-around, visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+
+align-items: flex-start | flex-end | center | baseline | stretch; (cross axis)
+align-content: flex-start | flex-end | center | space-between | space-around | stretch; (cross axis)
+
+The CSS align-content property defines how the browser distributes space between and around content items along the cross-axis of their container, which is serving as a flexbox container.
+
+Note: this property (align-content) has no effect when there is only one line of flex items.
+
+Note that CSS columns have no effect on a flex container.
+
+flex item:
+
+order: <integer>; /* default is 0 */
+flex-grow: <number>; /* default 0 */
+flex-shrink: <number>; /* default 1 */
+flex-basis: <length> | auto; /* default auto */ This defines the default size of an element before the remaining space is distributed.
+flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] This is the shorthand for flex-grow, flex-shrink and flex-basis combined.
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
